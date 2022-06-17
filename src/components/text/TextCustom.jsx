@@ -1,5 +1,5 @@
 import React from 'react';
-import { textStyle } from './textStyle.js';
+import './TextCustom.css';
 import PropTypes from 'prop-types';
 
 const TextCustom = ({
@@ -11,23 +11,22 @@ const TextCustom = ({
     justify,
     align,
 }) => {
-    const style = {
-        ...textStyle,
-        fontSize: (size ? size : textStyle.fontSize),
-        color: (color ? color : textStyle.color),
-        width: (boxWidth ? boxWidth : textStyle.width),
-        minHeight: (boxHeight ? boxHeight : textStyle.minHeight),
-        justifyContent: (justify ? justify : textStyle.justifyContent),
-        alignItems: (align ? align : textStyle.alignItems),
-    };
 
-    console.log(style);
-    return <span style={style}>
+    let style = {};
+    if (size) style = { ...style, fontSize: size };
+    if (color) style = { ...style, color: color };
+    if (boxWidth) style = { ...style, width: boxWidth };
+    if (boxHeight) style = { ...style, minHeight: boxHeight };
+    if (justify) style = { ...style, justifyContent: justify };
+    if (align) style = { ...style, alignItems: align }
+
+    return <span className='TextCustom' style={style}>
         {text}
     </span>;
 };
 
 TextCustom.propTypes = {
+    children: PropTypes.node,
     size: PropTypes.string,
     color: PropTypes.string,
     boxWidth: PropTypes.string,
