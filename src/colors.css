@@ -1,7 +1,12 @@
 :root {
+  /* button */
   --btn-bg-color: #ef835d;
   --btn-text-color: #ffffff;
+
+  /* layout */
   --bg-color-second: #2c365a;
-  --txt-color: #ffffff;
+
+  /* text */
+  --text-color-primary: #ffffff;
   --txt-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
