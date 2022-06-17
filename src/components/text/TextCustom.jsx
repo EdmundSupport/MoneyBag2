@@ -28,7 +28,6 @@ const TextCustom = ({
 };
 
 TextCustom.propTypes = {
-    children: PropTypes.element,
     size: PropTypes.string,
     color: PropTypes.string,
     boxWidth: PropTypes.string,
