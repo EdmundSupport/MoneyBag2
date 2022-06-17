@@ -17,7 +17,7 @@ const TextCustom = ({
     if (color) style = { ...style, color: color };
     if (boxWidth) style = { ...style, width: boxWidth };
     if (boxHeight) style = { ...style, minHeight: boxHeight };
-    if (justify) style = { ...style, justifyContent: justify };
+    if (justify) style = { ...style, justifyContent: justify, textAlign: justify };
     if (align) style = { ...style, alignItems: align }
 
     return <span className='TextCustom' style={style}>
