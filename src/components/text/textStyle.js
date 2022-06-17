@@ -10,7 +10,6 @@ const textStyle = {
   justifyContent: "center",
   alignItems: "center",
   boxSizing: "border-box",
-  backgroundColor: colors.bgColor,
   margin: 0,
   padding: "5px",
   border: "none",
