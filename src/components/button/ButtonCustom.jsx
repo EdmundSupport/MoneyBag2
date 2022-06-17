@@ -1,33 +1,41 @@
 import React from 'react';
-import { buttonStyle } from './buttonStyle.js';
+import './ButtonCustom.css';
 import PropTypes from 'prop-types';
 
 const ButtonCustom = ({
-    text,
-    size = '20px',
-    color = '#ffffff',
-    boxWidth = '100%',
-    boxHeight = '50px',
+    children: text,
+    size,
+    color,
+    bgColor,
+    boxWidth,
+    boxHeight,
+    justify,
+    align,
 }) => {
-    const style = {
-        ...buttonStyle,
-        fontSize: size,
-        color: color,
-        width: boxWidth,
-        height: boxHeight
-    };
 
-    return <button type="button" style={style}>
+    let style = {};
+    if (size) style = { ...style, fontSize: size };
+    if (color) style = { ...style, color: color };
+    if (bgColor) style = { ...style, backgroundColor: bgColor };
+    if (boxWidth) style = { ...style, width: boxWidth };
+    if (boxHeight) style = { ...style, minHeight: boxHeight };
+    if (justify) style = { ...style, justifyContent: justify };
+    if (align) style = { ...style, alignItems: align }
+
+    return <button type="button" className='ButtonCustom' style={style}>
         {text}
     </button>;
 };
 
 ButtonCustom.propTypes = {
-    text: PropTypes.string.isRequired,
+    children: PropTypes.node,
     size: PropTypes.string,
     color: PropTypes.string,
+    bgColor: PropTypes.string,
     boxWidth: PropTypes.string,
     boxHeight: PropTypes.string,
+    justify: PropTypes.string,
+    align: PropTypes.string,
 };
 
 export { ButtonCustom };
