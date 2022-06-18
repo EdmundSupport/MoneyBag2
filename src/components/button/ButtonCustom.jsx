@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 const ButtonCustom = ({
     children: text,
+    onClick,
     size,
     color,
     bgColor,
@@ -15,6 +16,7 @@ const ButtonCustom = ({
 
     let style = {};
     if (size) style = { ...style, fontSize: size };
+    if (!onClick) onClick = () => { console.log(`Button ${text}`) };
     if (color) style = { ...style, color: color };
     if (bgColor) style = { ...style, backgroundColor: bgColor };
     if (boxWidth) style = { ...style, width: boxWidth };
@@ -22,13 +24,14 @@ const ButtonCustom = ({
     if (justify) style = { ...style, justifyContent: justify };
     if (align) style = { ...style, alignItems: align }
 
-    return <button type="button" className='ButtonCustom' style={style}>
+    return <button type="button" onClick={onClick} className='ButtonCustom' style={style}>
         {text}
     </button>;
 };
 
 ButtonCustom.propTypes = {
     children: PropTypes.node,
+    onClick: PropTypes.func,
     size: PropTypes.string,
     color: PropTypes.string,
     bgColor: PropTypes.string,
