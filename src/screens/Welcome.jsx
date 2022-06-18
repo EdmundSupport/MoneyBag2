@@ -1,24 +1,32 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
-import { welcomeStyle } from './WelcomeStyle';
+import React from 'react';
+// import PropTypes from 'prop-types';
+import './Welcome.css';
 import { TextCustom } from '../components/text/TextCustom';
+import { ButtonCustom } from '../components/button/ButtonCustom';
+import { ImageCustom } from '../components/image/ImageCustom';
 
 const Welcome = () => {
     return (
-        <div style={welcomeStyle}>
+        <div className='Welcome'>
+            <div className="Welcome-img">
+                <ImageCustom source="./assets/img/bgs/background_v1.png" width="100%" height="auto" />
+            </div>
             <div className='Welcome-title'>
-                <TextCustom justify='left'>
-                    La mejor menera de
-                    <br />
+                <TextCustom color="var(--text-color-primary)" size="30px">
+                    La mejor menera de<br />
                     enviar tu dinero.
                 </TextCustom>
-
             </div>
-            <div className="Welcome-descript">
-
+            <div className="Welcome-description">
+                <TextCustom color="var(--text-color-primary)" size="15px">
+                    El mejor metodo de enviar y recibir dinero. <br />
+                    Coneta tu dinero, tus amigos y tu familia.
+                </TextCustom>
             </div>
             <div className="Welcome-button">
-
+                <ButtonCustom justify="center" onClick={null}>
+                    Empecemos
+                </ButtonCustom>
             </div>
         </div>
     )
