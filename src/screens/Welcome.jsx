@@ -9,16 +9,16 @@ const Welcome = () => {
     return (
         <div className='Welcome'>
             <div className="Welcome-img">
-                <ImageCustom source="./assets/img/bgs/background_v1.png" width="100%" height="auto" />
+                <ImageCustom source="./assets/img/bgs/background_v1.png" />
             </div>
             <div className='Welcome-title'>
-                <TextCustom color="var(--text-color-primary)" size="30px">
+                <TextCustom>
                     La mejor menera de<br />
                     enviar tu dinero.
                 </TextCustom>
             </div>
             <div className="Welcome-description">
-                <TextCustom color="var(--text-color-primary)" size="15px">
+                <TextCustom>
                     El mejor metodo de enviar y recibir dinero. <br />
                     Coneta tu dinero, tus amigos y tu familia.
                 </TextCustom>

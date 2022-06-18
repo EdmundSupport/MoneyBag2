@@ -12,20 +12,38 @@
   padding: 0;
 }
 
+.Welcome-img .ImageCustom {
+  width: 100%;
+  max-height: 80vh;
+}
+
 .Welcome-title {
   width: 100%;
   margin: 0;
-  padding: 0;
+  box-sizing: border-box;
+  padding: 0 2.5%;
+}
+
+.Welcome-title .TextCustom {
+  font-size: 30px;
+  color: var(--text-color-primary);
 }
 
 .Welcome-description {
   width: 100%;
   margin: 0;
-  padding: 0;
+  box-sizing: border-box;
+  padding: 0 2.5%;
+}
+
+.Welcome-description .TextCustom {
+  font-size: 15px;
+  color: var(--text-color-primary);
 }
 
 .Welcome-button {
   width: 100%;
+  margin: 0;
   box-sizing: border-box;
-  padding: 2.5%;
+  padding: 0 2.5% 2.5% 2.5%;
 }
